@@ -2,7 +2,7 @@ OPTS = -std=c++11 -O3 -fstack-protector-all -g -W -Wall -Wextra -Wunused -Wcast-
 all: clear a.out
 a.out: main.o functions.o matrix.o solver.o
 	g++ $(OPTS) $^ -o a.out
-main.o: main.cpp functions.h matrix.h solver.h
+main.o: main.cpp functions.h matrix.h solver.h approximation.h common.h
 	g++ -c $(OPTS) $<
 functions.o: functions.cpp functions.h
 	g++ -c $(OPTS) $<
